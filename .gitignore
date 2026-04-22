@@ -1,0 +1,39 @@
+# Ignore everything by default
+*
+
+# Keep git metadata and the ignore file itself
+!.gitignore
+!.git/
+
+# Track home dotfiles
+!.zshrc
+!.zprofile
+!.p10k.zsh
+!.vimrc
+
+# Track shell/config directories
+!.oh-my-zsh/
+!.ssh/
+!.config/
+
+# Ignore macOS and generated files
+.DS_Store
+.CFUserTextEncoding
+.Trash/
+.zcompdump*
+.zsh_history
+.zsh_sessions/
+.viminfo
+.vscode/
+.cache/
+
+# Ignore large user folders
+Desktop/
+Documents/
+Downloads/
+GitHub/
+Library/
+Movies/
+Music/
+Pictures/
+Public/
