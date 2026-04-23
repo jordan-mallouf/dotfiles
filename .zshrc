@@ -70,11 +70,14 @@ COMPLETION_WAITING_DOTS="true"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(git zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
 
-# User configuration
+ZSH_HIGHLIGHT_STYLES[path]='none'
+ZSH_HIGHLIGHT_STYLES[path_prefix]='none'
+
+## User configuration
 
 # export MANPATH="/usr/local/man:$MANPATH"
 
@@ -105,3 +108,20 @@ source $ZSH/oh-my-zsh.sh
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+# Custom Welcome Login Screen
+autoload -U colors && colors
+
+if [[ -o interactive ]]; then
+    echo
+
+    # Run NeoFetch
+    USER=jordan-mallouf neofetch --ascii_colors 6 6 6 6 --colors 6 6 6 6 | sed 's/@.*//'
+
+    # Display random quote if quotes file exists
+    QUOTES_FILE="/Users/malloufj/Documents/quotes.txt"
+    if [[ -f "$QUOTES_FILE" ]]; then
+        QUOTE=$(shuf -n 1 "$QUOTES_FILE")
+        echo "$QUOTE"
+    fi
+fi

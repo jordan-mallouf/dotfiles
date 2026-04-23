@@ -10,11 +10,12 @@
 !.zprofile
 !.p10k.zsh
 !.vimrc
+!.hushlogin
 
 # Track shell/config directories
 !.oh-my-zsh/
-!.ssh/
 !.config/
+!.copilot/agents/
 
 # Ignore macOS and generated files
 .DS_Store
@@ -26,6 +27,7 @@
 .viminfo
 .vscode/
 .cache/
+.ssh/
 
 # Ignore large user folders
 Desktop/
