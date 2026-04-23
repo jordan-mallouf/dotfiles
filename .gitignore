@@ -4,6 +4,9 @@
 # Keep git metadata and the ignore file itself
 !.git/
 
+# Track README.md
+!README.md
+
 # Track home dotfiles
 !.zshrc
 !.zprofile
