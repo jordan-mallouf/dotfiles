@@ -2,7 +2,6 @@
 *
 
 # Keep git metadata and the ignore file itself
-!.gitignore
 !.git/
 
 # Track home dotfiles
@@ -15,7 +14,10 @@
 # Track shell/config directories
 !.oh-my-zsh/
 !.config/
+!.copilot/
 !.copilot/agents/
+!.copilot/agents/*
+!.copilot/copilot-instructions.md
 
 # Ignore macOS and generated files
 .DS_Store
@@ -39,3 +41,6 @@ Movies/
 Music/
 Pictures/
 Public/
+
+# Ignore this .gitignore file itself
+.gitignore
