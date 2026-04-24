@@ -31,6 +31,7 @@ CRITICAL: You receive context from the parent agent including:
    - Tests were written and cover the new behavior
    - No obvious bugs or edge cases were missed
    - Error handling is appropriate
+   - Newly added code is reachable from an active entry point — compiling and passing tests does not prove the code is actually invoked
 
 5. **Determine Status** using these thresholds:
    - `APPROVED` — no CRITICAL or MAJOR issues (MINOR issues alone never block progress)
@@ -59,7 +60,7 @@ CRITICAL: You receive context from the parent agent including:
 - {What was done well}
 - {Good practices followed}
 
-**Issues Found:** {if none, say "None"}
+**Issues Found:**
 - **[{CRITICAL|MAJOR|MINOR}]** {Issue description with file/line reference}
 
 **Recommendations:**

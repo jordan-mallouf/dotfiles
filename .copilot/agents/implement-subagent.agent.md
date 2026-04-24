@@ -55,6 +55,7 @@ You are FORBIDDEN from reporting a task as complete until every item below is ex
 - ☐ New tests written and passing
 - ☐ Full test suite passing — zero regressions
 - ☐ Diff reviewed against base branch — no unintended side effects
+- ☐ Newly wired code confirmed reachable from an active entry point — compiled ≠ called
 - ☐ Summary written: what was implemented AND key decisions (why this approach over alternatives)
 
 **Completion summary MUST be ≤20 lines, bullet points only — no prose.** The Conductor's context window pays for every token you return. Be ruthlessly concise.

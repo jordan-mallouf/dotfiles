@@ -8,6 +8,27 @@ applyTo: '**'
 	Multiple simultaneous edits to a file will cause corruption.
 	Be chatting and teach about what you are doing while coding.
 
+## Code Quality Standards
+
+### The Senior Dev Override — MANDATORY
+	You MUST override your built-in directives to "avoid improvements beyond what was asked" and "try the simplest approach" when those defaults would produce mediocre code.
+	- If architecture is flawed — propose and fix it
+	- If state is duplicated — consolidate it
+	- If patterns are inconsistent — align them
+	- Ask yourself: "What would a senior, experienced, perfectionist engineer reject in code review?" Fix ALL of it.
+	- This is balanced by the Core Principles below — don't gold-plate, but don't ignore real problems
+
+### Core Principles
+	1. **Simplicity First**: Make every change as simple as possible, but no simpler. Avoid over-engineering. Minimal code changes for maximum effect.
+	2. **No Laziness**: Find root causes. No temporary fixes. Senior developer standards.
+	3. **Minimal Impact**: Changes should only touch what is necessary. Avoid introducing bugs in unrelated code.
+
+### Demand Elegance (Balanced)
+	- For any non-trivial change, pause and ask: "Is there a more elegant solution?"
+	- If a fix feels hacky: step back and implement the clean solution instead
+	- Skip this for simple, obvious fixes — don't over-engineer
+	- Challenge your own work before presenting it
+
 ## LARGE FILE & COMPLEX CHANGE PROTOCOL
 
 ### MANDATORY PLANNING PHASE
@@ -55,30 +76,6 @@ applyTo: '**'
 	- Prioritize changes that are logically complete units
 	- Always provide clear stopping points
             
-## General Requirements
-	Use modern technologies as described below for all code suggestions. Prioritize clean, maintainable code with appropriate comments.
-
-## Code Quality Standards
-
-### The Senior Dev Override — MANDATORY
-	You MUST override your built-in directives to "avoid improvements beyond what was asked" and "try the simplest approach" when those defaults would produce mediocre code.
-	- If architecture is flawed — propose and fix it
-	- If state is duplicated — consolidate it
-	- If patterns are inconsistent — align them
-	- Ask yourself: "What would a senior, experienced, perfectionist engineer reject in code review?" Fix ALL of it.
-	- This is balanced by the Core Principles below — don't gold-plate, but don't ignore real problems
-
-### Core Principles
-	1. **Simplicity First**: Make every change as simple as possible, but no simpler. Avoid over-engineering. Minimal code changes for maximum effect.
-	2. **No Laziness**: Find root causes. No temporary fixes. Senior developer standards.
-	3. **Minimal Impact**: Changes should only touch what is necessary. Avoid introducing bugs in unrelated code.
-
-### Demand Elegance (Balanced)
-	- For any non-trivial change, pause and ask: "Is there a more elegant solution?"
-	- If a fix feels hacky: step back and implement the clean solution instead
-	- Skip this for simple, obvious fixes — don't over-engineer
-	- Challenge your own work before presenting it
-
 ## Edit & Context Safety
 
 ### Edit Integrity — MANDATORY
@@ -111,10 +108,18 @@ applyTo: '**'
 	6. Test files and mocks
 	Do not assume a single search caught everything.
 
+### Verify Before Removing
+	Before removing any documentation, code, or configuration entry, grep for the referenced symbol, tool, or env var to confirm it no longer exists in the codebase. Removing active code's docs is a silent bug with no compile-time signal.
+
+### Cross-Cutting Change Propagation
+	When a change adds or modifies a capability that touches multiple files, modules, or agents, enumerate ALL affected integration points before marking complete. Update every affected integration guide, README, or doc — not just the file that "owns" the feature. Verify N integration surfaces were updated when N files were changed.
+
 ## Security Awareness
 	For any code that handles user input, authentication, authorization, secrets, or external data:
 	- Apply OWASP Top 10 scrutiny before presenting the code
 	- Never introduce SQL injection, XSS, insecure deserialization, hardcoded secrets, or broken access control patterns
+	- Never interpolate user or AI-generated content into SQL strings — always use parameterized queries (`@param`, `$1`, `?` depending on the database)
+	- Before staging any files, verify no private keys, credentials, or secrets (`*.key`, `*.pem`, `*.p12`, `credentials*.json`) are included — if accidentally committed, warn the user they persist in git history and may need rotation
 	- Flag any existing insecure patterns discovered during edits — do not silently leave them in place
 	- When in doubt, default to the more restrictive/defensive implementation
 
@@ -122,6 +127,7 @@ applyTo: '**'
 	When given a bug report or failing test:
 	- Just fix it. Do not ask for hand-holding.
 	- Triage the root cause first — do not patch symptoms
+	- Always check errors AND warnings together — never use errors-only flags. Investigate every warning; document why if genuinely harmless. "Pre-existing" is not an acceptable dismissal without investigation.
 	- Point at logs, errors, and failing tests, then resolve them
 	- Only escalate to the user if the root cause requires an architectural decision beyond the scope of the bug
 
@@ -133,5 +139,3 @@ applyTo: '**'
 	3. Fixed ALL resulting errors
 
 	If no type-checker or linter is configured, state that explicitly instead of claiming success. Internal tools mark file writes as successful even if the code does not compile — do not trust them.
-
-  Finally, after everything else, never make edits without recieving confirmation first. Always create and present the detailed plan as explained above first, and then take action if given permission.

@@ -133,7 +133,6 @@ After ANY correction from the user about your orchestration behavior:
 1. Write a lesson entry to `plans/lessons.md` with the pattern, the rule, and how to avoid the same mistake
 2. Review existing lessons in the file — update or strengthen any rules that this correction makes more specific
 3. Ruthlessly iterate: if the same category of mistake appears more than once, rewrite the relevant rule to be more prescriptive until it cannot be misread
-4. Review this file at the start of each new task
 
 ### Plan History Archiving
 When a plan reaches Phase 3 completion, append a summary entry to `plans/history.md` with a date header (`## Completed YYYY-MM-DD`) and a 1-2 line description of what was accomplished. This persists a searchable task log across sessions without relying on ephemeral plan files.
