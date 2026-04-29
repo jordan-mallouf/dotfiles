@@ -17,6 +17,10 @@
 # Track shell/config directories
 !.oh-my-zsh/
 !.config/
+!.config/
+!.config/Code/
+!.config/Code/User/
+!.config/Code/User/settings.json
 !.copilot/
 !.copilot/agents/
 !.copilot/agents/*

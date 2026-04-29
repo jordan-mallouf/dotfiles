@@ -1,0 +1,310 @@
+{
+	"[github-actions-workflow][html][javascript][json][json5][jsonc][markdown][sql][xml][yaml]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"[go]": {
+		"editor.tabSize": 4
+	},
+	"[java]": {
+		"editor.defaultFormatter": "redhat.java"
+	},
+	"[markdown]": {
+		"editor.unicodeHighlight.ambiguousCharacters": true
+	},
+	"[shellscript]": {
+		"editor.defaultFormatter": "foxundermoon.shell-format"
+	},
+	"[terraform]": {
+		"editor.defaultFormatter": "hashicorp.terraform"
+	},
+	"accessibility.openChatEditedFiles": false,
+	"chat.agent.maxRequests": 100,
+	"chat.tools.terminal.autoApprove": {
+		"cd": true,
+		"echo": true,
+		"ls": true,
+		"dir": true,
+		"pwd": true,
+		"cat": true,
+		"head": true,
+		"tail": true,
+		"findstr": true,
+		"wc": true,
+		"tr": true,
+		"cut": true,
+		"cmp": true,
+		"which": true,
+		"basename": true,
+		"dirname": true,
+		"realpath": true,
+		"readlink": true,
+		"stat": true,
+		"file": true,
+		"od": true,
+		"du": true,
+		"df": true,
+		"sleep": true,
+		"nl": true,
+		"grep": true,
+		"date": true,
+		"find": true,
+		"rg": true,
+		"sort": true,
+		"tree": true,
+		"jq": true,
+		"sed": false,
+		"rm": false,
+		"rmdir": false,
+		"del": false,
+		"Remove-Item": false,
+		"ri": false,
+		"rd": false,
+		"erase": false,
+		"dd": false,
+		"kill": false,
+		"ps": false,
+		"top": false,
+		"Stop-Process": false,
+		"spps": false,
+		"taskkill": false,
+		"taskkill.exe": false,
+		"curl": false,
+		"wget": false,
+		"irm": false,
+		"iwr": false,
+		"chmod": false,
+		"chown": false,
+		"sp": false,
+		"xargs": false,
+		"eval": false,
+		"Invoke-Expression": false,
+		"iex": false
+	},
+	"chat.tools.terminal.outputLocation": "terminal",
+	"chat.tools.urls.autoApprove": {
+		"https://code.visualstudio.com/*": true,
+		"https://github.com/microsoft/vscode/wiki/*": true,
+		"https://github.com/sabre-internal/*": true,
+		"https://gitdocs.sabre.com/gitdocs/*": true,
+		"https://registry.terraform.io/*": true
+	},
+	"chat.viewSessions.orientation": "sideBySide",
+	"editor.bracketPairColorization.enabled": true,
+	"editor.codeActionsOnSave": {
+		"source.fixAll": "always",
+		"source.fixAll.eslint": "always",
+		"source.fixAll.markdownlint": "always",
+		"source.fixAll.sortJSON": "never",
+		"source.generate.finalModifiers": "always",
+		"source.organizeImports": "always",
+		"source.sortMembers": "always"
+	},
+	"editor.cursorSmoothCaretAnimation": "on", // Animate cursor movement smoothly
+	"editor.cursorSurroundingLines": 5, // Minimum visible lines above and below the cursor
+	"editor.find.seedSearchStringFromSelection": "selection", // Pre-populate Find from the current selection
+	"editor.fontFamily": "JetBrainsMono Nerd Font", // Font family used in the editor
+	"editor.fontLigatures": true, // Enable font ligature rendering
+	"editor.formatOnSave": true, // Run the configured formatter when saving a file
+	"editor.guides.bracketPairs": false, // Show indent guides for bracket pairs
+	"editor.inlineSuggest.edits.allowCodeShifting": "never", // Allow code to shift for inline edit suggestions
+	"editor.inlineSuggest.enabled": false, // Show ghost-text inline completion suggestions
+	"editor.inlineSuggest.minShowDelay": 1000, // Delay (ms) before inline suggestions appear
+	"editor.insertSpaces": false, // Insert spaces instead of tabs when Tab is pressed
+	"editor.lightbulb.enabled": "onCode", // When to display the code-action lightbulb
+	"editor.minimap.enabled": false,
+	"editor.semanticHighlighting.enabled": true, // Enable token-based semantic syntax highlighting
+	"editor.smoothScrolling": true, // Animate scrolling in the editor
+	"editor.suggestSelection": "first", // Pre-selection strategy in the autocomplete list
+	"editor.tabSize": 2, // Number of spaces represented by one indentation level
+	"editor.unicodeHighlight.allowedCharacters": {
+		// Unicode characters exempt from highlight warnings
+		"“": false,
+		"”": false,
+		"×": true,
+		"➕": true,
+		"➖": true
+	},
+	"editor.unicodeHighlight.includeComments": true, // Also highlight ambiguous Unicode chars in comments
+	"explorer.compactFolders": false, // Collapse single-child folder chains in Explorer
+	"explorer.copyRelativePathSeparator": "/", // Path separator used by Copy Relative Path
+	"explorer.fileNesting.enabled": true, // Group related files under their parent in Explorer
+	"explorer.fileNesting.patterns": {
+		// Rules that determine which files are nested together
+		".env": ".env.*",
+		".env.*": ".env.${capture}.local",
+		"*.ex": "${capture}.eex, ${capture}.html.heex",
+		"*.go": "${capture}_test.go",
+		"go.mod": "go.sum, go.work, go.work.sum",
+		"main.tf": "variables.tf, outputs.tf, terraform.tfvars, terraform.tfvars.example, .terraform.lock.hcl",
+		"package.json": "bun.lockb, package-lock.json, pnpm-lock.yaml, yarn.lock",
+		"pom.xml": "mvnw, mvnw.cmd, .mvn"
+	},
+	"explorer.incrementalNaming": "smart", // Naming strategy when a file copy would collide
+	"explorer.openEditors.sortOrder": "alphabetical", // Sort order of the Open Editors list
+	"extensions.allowOpenInModalEditor": false, // Allow extensions to request a modal editor
+	"files.associations": {
+		// Map file-name patterns to VS Code language IDs
+		".bash_aliases": "shellscript",
+		".bash_profile": "shellscript",
+		".bashrc": "shellscript",
+		".env": "env",
+		".env.*": "env",
+		".env.*.local": "env",
+		".env.local": "env",
+		".zshrc": "shellscript",
+		"*.hcl": "terraform",
+		"*.metadata": "yaml",
+		"*.sql": "sql",
+		"*.tfstate": "json",
+		"*.tfstate.backup": "json",
+		"authorized_keys": "ssh_config"
+	},
+	"files.autoSave": "off", // When VS Code automatically saves dirty files
+	"files.insertFinalNewline": true, // Append a newline at the end of files on save
+	"files.restoreUndoStack": false, // Restore undo history when a file is reopened
+	"files.trimFinalNewlines": true, // Remove extra trailing newlines on save
+	"files.trimTrailingWhitespace": true, // Strip trailing whitespace from lines on save
+	"git.allowForcePush": true, // Permit force-pushing branches from VS Code
+	"git.autofetch": true, // Fetch remotes automatically in the background
+	"git.autoRepositoryDetection": true, // When to scan for Git repositories automatically
+	"git.autoStash": true, // Stash uncommitted changes before pulling
+	"git.blame.editorDecoration.enabled": false, // Show inline git blame next to each line
+	"git.confirmForcePush": true, // Ask for confirmation before force-pushing
+	"git.confirmSync": true, // Ask for confirmation before syncing (push/pull)
+	"git.enableCommitSigning": true, // Sign commits with GPG automatically
+	"git.enableSmartCommit": false, // Commit all changes when no files are staged
+	"git.ignoredRepositories": [".vscode"], // Repos excluded from source-control tracking
+	"git.inputValidationLength": 80, // Character limit for the commit message input box
+	"git.inputValidationSubjectLength": 80, // Character limit for the commit subject line
+	"git.pruneOnFetch": true, // Prune deleted remote-tracking branches on fetch
+	"git.pullBeforeCheckout": false, // Pull the latest commits before switching branches
+	"git.rebaseWhenSync": true, // Rebase instead of merge when syncing with remote
+	"git.repositoryScanMaxDepth": 1, // Max folder depth to scan for nested repositories
+	"git.scanRepositories": [], // Extra paths scanned for Git repositories
+	"git.timeline.showUncommitted": true, // Include uncommitted changes in the Timeline view
+	"github.copilot.chat.additionalReadAccessPaths": [], // Extra local paths Copilot chat may read
+	"github.copilot.chat.agent.autoFix": true, // Let the agent auto-fix its own errors
+	"github.copilot.chat.alternateGeminiModelFPrompt.enabled": true, // Use alternate prompt for Gemini F model
+	"github.copilot.chat.alternateGptPrompt.enabled": true, // Use alternate prompt format for GPT models
+	"github.copilot.chat.anthropic.tools.websearch.enabled": true, // Enable web-search tool for Anthropic models
+	"github.copilot.chat.anthropic.tools.websearch.userLocation": {
+		// Location hint sent with Copilot web searches
+		"country": "US",
+		"region": "Dallas, TX",
+		"timezone": "America/Chicago"
+	},
+	"github.copilot.chat.askAgent.additionalTools": [], // Extra tools available in ask-agent mode
+	"github.copilot.chat.cloudAgent.enabled": false, // Enable the cloud-hosted Copilot agent
+	"github.copilot.chat.codesearch.enabled": true, // Enable semantic code search in Copilot chat
+	"github.copilot.chat.edits.gemini3MultiReplaceString": true, // Use Gemini 3 multi-replace in Edits
+	"github.copilot.chat.enableUserPreferences": true, // Let Copilot learn and apply user preferences
+	"github.copilot.chat.localeOverride": "en", // Locale used in Copilot chat responses
+	"github.copilot.chat.newWorkspace.useContext7": true, // Use Context7 when scaffolding new workspaces
+	"github.copilot.chat.reviewSelection.instructions": [
+		{
+			"text": "Apply the Senior Dev Override: flag ALL flawed architecture, duplicated state, and inconsistent patterns — even if not explicitly asked. Ask 'What would a senior engineer reject?' and flag it."
+		},
+		{
+			"text": "Security (OWASP Top 10): flag hardcoded secrets, credentials, or private keys. Flag SQL injection risks — always require parameterized queries. Flag broken access control, insecure deserialization, and XSS vectors."
+		},
+		{
+			"text": "Go: verify all errors are explicitly handled — never ignored with _. Check that goroutine leaks are avoided and context is propagated correctly."
+		},
+		{
+			"text": "Terraform: flag resources missing required tags, non-standard naming conventions, hardcoded values that should be variables, and missing outputs for consumed attributes."
+		},
+		{
+			"text": "Bash: flag scripts missing 'set -euo pipefail'. Flag unquoted variables that risk word splitting. Flag commands that silently swallow errors."
+		},
+		{
+			"text": "Java: flag unchecked exceptions that should be handled, resource leaks (unclosed streams/connections), and missing null checks on external inputs."
+		},
+		{
+			"text": "Cross-cutting changes: if a rename, interface change, or new capability touches multiple files, flag any integration points that were not updated."
+		},
+		{
+			"text": "Simplicity: flag over-engineering, unnecessary abstractions, and unrelated edits. Core principle: minimal code changes for maximum effect."
+		}
+	], // Custom instructions for code review
+	"github.copilot.enable": {}, // Enable/disable Copilot completions per language ID
+	"github.copilot.nextEditSuggestions.enabled": false, // Show next-edit prediction suggestions
+	"github.copilot.selectedCompletionModel": "Claude 4.6 (Sonnet)", // Model used for Copilot inline completions
+	"github.gitProtocol": "ssh", // Protocol (ssh/https) used for GitHub operations
+	"go.inlayHints.constantValues": true, // Show constant values as inlay hints in Go
+	"go.inlayHints.functionTypeParameters": true, // Show type-parameter hints in Go functions
+	"go.toolsManagement.autoUpdate": true, // Auto-update Go tools managed by the extension
+	"go.useLanguageServer": true, // Use gopls as the Go language server
+	"gopls": {
+		// Settings passed directly to the gopls language server
+		"formatting.gofumpt": true
+	},
+	"markdown.editor.pasteUrlAsFormattedLink.enabled": "never", // Paste URLs as formatted Markdown links
+	"npm.packageManager": "pnpm", // Package manager VS Code uses for npm scripts
+	"prettier.arrowParens": "avoid", // Whether to include parens around single arrow-fn args
+	"prettier.semi": false, // Add semicolons at end of statements in Prettier
+	"prettier.trailingComma": "all", // Trailing-comma style used by Prettier
+	"prettier.useTabs": true, // Indent with tabs instead of spaces in Prettier
+	"redhat.telemetry.enabled": false, // Send usage telemetry to Red Hat
+	"references.preferredLocation": "view", // Where Find All References results are displayed
+	"remote.defaultExtensionsIfInstalledLocally": [
+		// Extensions installed in remote when present locally
+		"esbenp.prettier-vscode",
+		"foxundermoon.shell-format",
+		"GitHub.copilot-chat",
+		"github.github-vscode-theme",
+		"ms-vscode-remote.remote-wsl",
+		"asciidoctor.asciidoctor-vscode",
+		"golang.go",
+		"hashicorp.terraform",
+		"oracle.oracle-java"
+	],
+	"scm.defaultViewMode": "tree", // Default view mode for the Source Control panel
+	"search.defaultViewMode": "tree", // Default view mode for Search results
+	"security.workspace.trust.enabled": false, // Enable workspace-trust security prompts
+	"settingsSync.ignoredExtensions": [], // Extensions excluded from Settings Sync
+	"settingsSync.ignoredSettings": [], // Settings keys excluded from Settings Sync
+	"task.allowAutomaticTasks": "off", // Allow tasks configured with runOn: folderOpen
+	"telemetry.telemetryLevel": "error", // Telemetry data level sent to Microsoft
+	"terminal.external.windowsExec": "wt", // External terminal application on Windows
+	"terminal.integrated.autoReplies": {}, // Automatic replies to terminal prompts
+	"terminal.integrated.defaultProfile.linux": "zsh", // Default shell profile used on Linux
+	"terminal.integrated.enableMultiLinePasteWarning": "never", // Warn before pasting multiple lines
+	"terminal.integrated.fontFamily": "JetBrainsMono Nerd Font", // Font family used in the integrated terminal
+	"terminal.integrated.hideOnStartup": "whenEmpty", // When to hide the terminal panel at startup
+	"terminal.integrated.initialHint": false, // Show keyboard shortcut hint in new terminals
+	"terminal.integrated.minimumContrastRatio": 4.5, // Minimum contrast ratio for terminal text colours
+	"terminal.integrated.scrollback": 1000, // Number of lines retained in terminal scroll history
+	"terminal.integrated.showExitAlert": false, // Show an alert when a terminal process exits
+	"terminal.integrated.stickyScroll.enabled": false, // Pin sticky scroll header in the terminal
+	"terminal.integrated.suggest.enabled": false, // Show shell command suggestions in the terminal
+	"terminal.integrated.tabs.focusMode": "singleClick", // How a terminal tab receives keyboard focus
+	"terminal.integrated.tabStopWidth": 2, // Tab-stop width inside the integrated terminal
+	"update.mode": "default", // How VS Code checks for and applies updates
+	"window.dialogStyle": "custom", // Use native or custom dialogs
+	"window.restoreFullscreen": true, // Restore the fullscreen state when reopening VS Code
+	"window.titleBarStyle": "custom", // Style of the OS window title bar
+	"workbench.activityBar.location": "default", // Location of the Activity Bar
+	"workbench.colorCustomizations": {
+		// Per-theme color token overrides
+	},
+	"workbench.colorTheme": "GitHub Dark", // Active VS Code colour theme
+	"workbench.editor.highlightModifiedTabs": true, // Highlight tabs that have unsaved changes
+	"workbench.editor.pinnedTabSizing": "shrink", // Size strategy for pinned editor tabs
+	"workbench.editor.revealIfOpen": true, // Reveal an existing editor instead of opening another
+	"workbench.editor.tabSizing": "fit", // How editor tab widths are computed
+	"workbench.editor.useModal": "off", // Open specific editors in a modal overlay
+	"workbench.editor.wrapTabs": false, // Wrap the tab bar to multiple rows when full
+	"workbench.editorAssociations": {
+		// Map file patterns to specific editor types
+	},
+	"workbench.iconTheme": "vs-seti", // File and folder icon theme
+	"workbench.list.smoothScrolling": true, // Animate scrolling in tree and list views
+	"workbench.secondarySideBar.defaultVisibility": "hidden", // Default visibility of the secondary side bar
+	"workbench.settings.editor": "json", // Open settings in the UI or as JSON by default
+	"workbench.settings.openDefaultKeybindings": true, // Show default keybindings alongside user keybindings
+	"workbench.settings.openDefaultSettings": false, // Show default settings alongside user settings
+	"workbench.settings.useSplitJSON": false, // Use split view when editing JSON settings
+	"workbench.startupEditor": "none", // Editor shown when VS Code starts
+	"remote.autoForwardPortsSource": "hybrid",
+	"scm.repositories.selectionMode": "single" // Hide the Activity Bar when Zen Mode is active
+}
