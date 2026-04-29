@@ -1,0 +1,8 @@
+asciidoctor.asciidoctor-vscode
+esbenp.prettier-vscode
+foxundermoon.shell-format
+github.copilot-chat
+github.github-vscode-theme
+golang.go
+hashicorp.terraform
+redhat.java

@@ -20,6 +20,7 @@
 !.config/
 !.config/Code/
 !.config/Code/User/
+!.config/Code/User/extensions.txt
 !.config/Code/User/settings.json
 !.copilot/
 !.copilot/agents/
